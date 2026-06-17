@@ -203,8 +203,9 @@
     /* =====================================================
        EDIT HERE: Change the date, time, and calendar link.
 
-       1. Replace "Torsdag 26. juni" with the webinar date
-       2. Replace "kl. 10:00" with the webinar time
+       1. Update WEBINAR_DATE in the <script> at the bottom
+          (currently: "2026-06-30T11:00:00")
+       2. Update the visible date text in the .datetime div
        3. Replace the # in the <a> href with your
           Google Calendar / Outlook / .ics link
        ===================================================== */
@@ -225,7 +226,81 @@
     .webinar-banner .note {
       font-size: 1rem;
       color: var(--color-text-light);
+      margin-bottom: 1.5rem;
+    }
+
+    /* ── COUNTDOWN ── */
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
       margin-bottom: 2rem;
+    }
+
+    .countdown-unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 72px;
+    }
+
+    .countdown-number {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      color: var(--color-logo);
+      line-height: 1;
+      background: rgba(245, 210, 88, 0.12);
+      border: 1px solid rgba(245, 210, 88, 0.25);
+      border-radius: 10px;
+      width: 72px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .countdown-label {
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: var(--color-text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 0.4rem;
+    }
+
+    .countdown-separator {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 700;
+      color: rgba(245, 210, 88, 0.4);
+      align-self: flex-start;
+      padding-top: 1.1rem;
+    }
+
+    .countdown-done {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--color-logo);
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 480px) {
+      .countdown-number {
+        width: 56px;
+        height: 56px;
+        font-size: 1.6rem;
+      }
+
+      .countdown {
+        gap: 0.5rem;
+      }
+
+      .countdown-separator {
+        font-size: 1.4rem;
+        padding-top: 0.7rem;
+      }
     }
 
     .cta-button {
@@ -413,8 +488,31 @@
 
   <!-- WEBINAR DATE & CTA -->
   <section class="webinar-banner">
-    <div class="datetime">Torsdag 26. juni kl. 10:00</div>
+    <div class="datetime">Mandag 30. juni kl. 11:00</div>
     <div class="note">Zoom-lenken er i e-posten din. Logg inn noen minutter før.</div>
+
+    <div id="countdown" class="countdown">
+      <div class="countdown-unit">
+        <div class="countdown-number" id="cd-days">--</div>
+        <div class="countdown-label">Dager</div>
+      </div>
+      <div class="countdown-separator">:</div>
+      <div class="countdown-unit">
+        <div class="countdown-number" id="cd-hours">--</div>
+        <div class="countdown-label">Timer</div>
+      </div>
+      <div class="countdown-separator">:</div>
+      <div class="countdown-unit">
+        <div class="countdown-number" id="cd-minutes">--</div>
+        <div class="countdown-label">Min</div>
+      </div>
+      <div class="countdown-separator">:</div>
+      <div class="countdown-unit">
+        <div class="countdown-number" id="cd-seconds">--</div>
+        <div class="countdown-label">Sek</div>
+      </div>
+    </div>
+
     <a href="#" class="cta-button">Legg til i kalender</a>
   </section>
 
@@ -433,6 +531,45 @@
     <p>Spørsmål? Svar på bekreftelses-e-posten, eller send en melding til <a href="mailto:post@resolvr.no">post@resolvr.no</a></p>
     <p class="copyright">&copy; 2026 <a href="https://resolvr.no">Resolvr AS</a>. Alle rettigheter reservert.</p>
   </footer>
+
+  <script>
+    // ── EDIT HERE: Change this date to match the webinar ──
+    var WEBINAR_DATE = "2026-06-30T11:00:00";
+
+    (function () {
+      var target = new Date(WEBINAR_DATE).getTime();
+      var $days = document.getElementById("cd-days");
+      var $hours = document.getElementById("cd-hours");
+      var $minutes = document.getElementById("cd-minutes");
+      var $seconds = document.getElementById("cd-seconds");
+      var $countdown = document.getElementById("countdown");
+
+      function pad(n) { return n < 10 ? "0" + n : String(n); }
+
+      function tick() {
+        var now = Date.now();
+        var diff = target - now;
+
+        if (diff <= 0) {
+          $countdown.innerHTML = '<div class="countdown-done">Webinaret starter nå!</div>';
+          return;
+        }
+
+        var d = Math.floor(diff / 86400000);
+        var h = Math.floor((diff % 86400000) / 3600000);
+        var m = Math.floor((diff % 3600000) / 60000);
+        var s = Math.floor((diff % 60000) / 1000);
+
+        $days.textContent = pad(d);
+        $hours.textContent = pad(h);
+        $minutes.textContent = pad(m);
+        $seconds.textContent = pad(s);
+      }
+
+      tick();
+      setInterval(tick, 1000);
+    })();
+  </script>
 
 </body>
 </html>
