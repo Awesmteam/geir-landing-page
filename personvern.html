@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personvernerklæring – Resolvr AS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --color-bg: #1d7b01;
+      --color-logo: #f5d258;
+      --color-surface: #ffffff;
+      --color-text: #1a2e05;
+      --color-text-secondary: #3d5a1e;
+      --color-border: #c8dbb8;
+      --color-link: #15620a;
+      --color-link-hover: #0e4a06;
+      --font-heading: 'EB Garamond', Georgia, serif;
+      --font-body: 'Lato', 'Segoe UI', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--color-text);
+      background: var(--color-bg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      background: var(--color-bg);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      border-bottom: 3px solid var(--color-logo);
+    }
+
+    .logo-text {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--color-logo);
+      letter-spacing: 0.02em;
+    }
+
+    .logo-tagline {
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      font-weight: 300;
+      color: rgba(245, 210, 88, 0.7);
+      margin-top: 0.25rem;
+    }
+
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    .card {
+      background: var(--color-surface);
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    @media (min-width: 640px) {
+      .card {
+        padding: 3rem 3.5rem;
+      }
+    }
+
+    .page-title {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--color-bg);
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+
+    .page-intro {
+      font-size: 1.05rem;
+      color: var(--color-text-secondary);
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    h2 {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--color-bg);
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    h3 {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      margin: 0.5rem 0 1rem 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    a {
+      color: var(--color-link);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+      transition: color 200ms ease;
+    }
+
+    a:hover {
+      color: var(--color-link-hover);
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--color-bg);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
+    .contact-box {
+      margin-top: 2rem;
+      padding: 1.25rem 1.5rem;
+      background: #f0f7ec;
+      border-radius: 8px;
+      border-left: 4px solid var(--color-bg);
+    }
+
+    .contact-box p {
+      margin-bottom: 0.3rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      color: rgba(245, 210, 88, 0.6);
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--color-logo);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 480px) {
+      .page-title {
+        font-size: 1.6rem;
+      }
+
+      h2 {
+        font-size: 1.25rem;
+      }
+
+      .card {
+        padding: 1.75rem 1.25rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      a {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-text">Resolvr</div>
+    <div class="logo-tagline">resolvr.no</div>
+  </header>
+
+  <main>
+    <article class="card">
+      <h1 class="page-title">Personvernerklæring</h1>
+      <p class="page-intro">
+        Brukernes tillit er viktig for oss, og Resolvr&nbsp;AS er opptatt av å ivareta ditt personvern. Under forklarer vi hvordan og hvorfor vi samler inn informasjon om våre besøkende og brukere.
+      </p>
+
+      <h2>1. Innledende bestemmelser</h2>
+      <p>Denne personvernerklæringen gjelder for <strong>resolvr.no</strong>, og tilknyttede publikasjoner og tjenester.</p>
+
+      <h2>2. Derfor lagrer vi informasjon</h2>
+      <p>Vi lagrer informasjon av flere grunner:</p>
+      <ul>
+        <li>For at systemet skal kunne kjenne igjen brukerne våre, for å kunne bruke tjenestene</li>
+        <li>For å ha en bekreftelse på kjøp/påmelding</li>
+        <li>For at brukerne våre skal kunne melde seg på våre arrangement</li>
+        <li>For målretting og fjerning av annonser og redaksjonelt innhold som er relevant/irrelevante for deg</li>
+        <li>For å kunne sende deg oppdatert informasjon om kurs og konferanser du har meldt deg på</li>
+        <li>Utvikle og forbedre våre tjenester gjennom å forstå hvordan de brukes</li>
+        <li>Behandling av søknader</li>
+      </ul>
+
+      <h2>3. Dette bruker vi ikke informasjonen til</h2>
+      <p>Informasjon du oppgir til oss blir kun lagret i våre systemer. Informasjonen vil ikke selges videre, og vil kun benyttes til å gi deg som bruker mer relevant informasjon og bedre tjenester.</p>
+      <p>Tredjeparter (som <a href="https://www.google.com/policies/privacy/">Google Analytics</a> og Facebook Pixel) vil kunne hente ut IP-adresse og data basert på dine surfemønstre. Resolvr er pliktig å påse at disse tredjepartene behandler data i tråd med norsk regelverk.</p>
+
+      <h2>4. Slik samles opplysningene inn</h2>
+
+      <h3>Anonyme opplysninger</h3>
+      <p>Det blir loggført hvilke nettsider som er besøkt, tidspunkt, nettleser og fra hvilken IP-adresse besøket kommer fra.</p>
+
+      <h3>Personopplysninger</h3>
+
+      <h3>Registrering av brukerinformasjon</h3>
+      <p>Ved registrering av brukerinformasjon lagrer vi navn, kommune, alder, e-post og ønske om å vise navn offentlig eller være anonym.</p>
+
+      <h2>5. Informasjon som lagres lokalt</h2>
+      <p>Vi bruker eksempelvis informasjonskapsler til å lagre anonym identifikasjon lokalt i din nettleser. Disse brukes til å forbedre brukeropplevelsen, f.eks. å huske skjemadata som er skrevet inn, slik at disse blir husket til senere bruk.</p>
+      <p>Vi inkluderer også elementer fra tredjepartstjenester som f.eks. Facebook, LinkedIn, Twitter og Google+, som laster sine egne informasjonskapsler som lesere har på disse tjenestene fra før.</p>
+
+      <h2>6. Behandling av personopplysninger / cookies</h2>
+      <p>Personopplysninger vil bli lagret i vår database, behandlet og publisert i samsvar med bestemmelsene i personopplysningsloven, og slik det fremgår nedenfor.</p>
+      <p>Se <a href="https://lovdata.no/dokument/NL/lov/2000-04-14-31">personopplysningsloven</a> hos Lovdata. Mer om grunnleggende personvern, se «<a href="https://www.datatilsynet.no/personvern/Personopplysninger/">Hva er en personopplysning?</a>» hos Datatilsynet.</p>
+      <p>Når det gjelder samtykke til bruk av informasjonskapsler (cookies), reguleres dette av ekom-loven. Mer om dette finner du også på <a href="https://www.datatilsynet.no/Teknologi/Internett/cookies/">Datatilsynets side om informasjonskapsler</a>.</p>
+
+      <h2>7. Behandlingsansvarlig</h2>
+      <p>Dine personopplysninger vil bli behandlet av Resolvr&nbsp;AS, som er behandlingsansvarlig, og våre IT-leverandører for det formål å levere tjenester og for å bedre tjenestene. Vi engasjerer dessuten noen ganger andre firmaer for å bidra til vår utvikling, og vi kan i slike tilfeller gi disse firmaene de opplysninger de trenger for å utføre dette.</p>
+      <p>Dine personopplysninger vil for øvrig ikke utleveres til andre uten at du har gitt ditt samtykke, eller vi er rettslig forpliktet til utlevering.</p>
+      <p>Dine personopplysninger lagres innenfor EU/EØS-området, og iht. norsk personvernlovgivning.</p>
+
+      <h2>8. Registrert profildata, innsyn og retting</h2>
+      <p>Opplysningene du selv gir ved registrering (navn, e-post etc.) benyttes for å levere og videreutvikle tjenesten, samt til analyse og til statistisk formål.</p>
+      <ul>
+        <li>Det er du selv som registrerer informasjonen i vår database.</li>
+        <li>Du har rett til å be om innsyn i hvilke opplysninger som er registrert om deg, og dersom de er uriktige eller ufullstendige, kan du få dem rettet, supplert eller slettet. Dette kan du gjøre ved å kontakte oss.</li>
+        <li>Du har rett til å be om å få dine personopplysninger slettet fra våre databaser. Dette imøtekommer vi så lenge tjenesten du vil slettes fra ikke har særegne krav og begrunnelser for å ta vare på dataene dine.</li>
+        <li>Ved mistanke om grovt feilaktige opplysninger i brukerprofil kan vi slette din konto uten nærmere saksgang.</li>
+      </ul>
+
+      <h2>8b. Den registrertes rettigheter inkluderer også</h2>
+      <ul>
+        <li>Du har rett til å anmode om begrensning av behandlingen.</li>
+        <li>Du har rett til å protestere på behandlingen.</li>
+        <li>Du har rett til dataportabilitet.</li>
+        <li>Du har rett til å klage til Datatilsynet.</li>
+        <li>Du har rett til når som helst å tilbakekalle ditt samtykke.</li>
+      </ul>
+
+      <h2>9. Slik forhindrer du at informasjonskapsler lagres</h2>
+      <p>Du kan slette informasjonskapsler fra din harddisk når som helst, men dette gjør at dine personlige innstillinger forsvinner.</p>
+      <p>Du kan også endre innstillingene i din nettleser slik at den ikke tillater at informasjonskapsler lagres på din harddisk. Dette gir imidlertid dårligere funksjonalitet på visse nettsider, kan forhindre tilgang til sider som krever innlogging og gjøre at deler av innhold og enkelte funksjoner ikke blir tilgjengelige.</p>
+      <p>For å unngå at såkalte anonyme identifikatorer blir lagret, må du deaktivere JavaScript i nettleseren din. JavaScript er imidlertid nødvendig for at mange grunnleggende funksjoner på nettsidene skal fungere.</p>
+      <p>Hvis du ønsker kontroll over hvilke tredjeparter som benytter teknologien til ulike formål, anbefaler vi verktøy som Ghostery og Disconnect.</p>
+
+      <h2>10. Kontaktinformasjon</h2>
+      <div class="contact-box">
+        <p><strong>Resolvr AS</strong></p>
+        <p>Fjordsvingen 11, 3427 Gullaug</p>
+        <p>E-post: <a href="mailto:post@resolvr.no">post@resolvr.no</a></p>
+      </div>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 <a href="https://resolvr.no">Resolvr AS</a>. Alle rettigheter reservert.</p>
+  </footer>
+
+</body>
+</html>
